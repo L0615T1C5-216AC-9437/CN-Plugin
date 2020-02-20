@@ -17,7 +17,7 @@ Simply place the output jar from the step above in your server's `config/mods` d
 List your currently installed plugins/mods by running the `mods` command.
 
 ### Self Promotion
-Our discord server cn-discord.ddns.net  
+Our discord server: cn-discord.ddns.net  
 Our game servers:  
 chaotic-neutral.ddns.net:1111  
 chaotic-neutral.ddns.net:2222  
