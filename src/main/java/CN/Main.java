@@ -248,6 +248,9 @@ public class Main extends Plugin {
                 case "sharded":
                     playerTeam = "[accent] " + playerTeam;
                     break;
+                case "yellow":
+                    playerTeam = "[accent] " + playerTeam;
+                    break;
                 case "crux":
                     playerTeam = "[scarlet] " + playerTeam;
                     break;
@@ -403,7 +406,15 @@ public class Main extends Plugin {
                                 setTeam = Team.crux;
                                 setTeamColor = "[scarlet]";
                                 break;
+                            case "red":
+                                setTeam = Team.crux;
+                                setTeamColor = "[scarlet]";
+                                break;
                             case "derelict":
+                                setTeam = Team.derelict;
+                                setTeamColor = "[gray]";
+                                break;
+                            case "gray":
                                 setTeam = Team.derelict;
                                 setTeamColor = "[gray]";
                                 break;
@@ -416,7 +427,7 @@ public class Main extends Plugin {
                                 setTeamColor = "[purple]";
                                 break;
                             default:
-                                player.sendMessage("[salmon]CT[lightgray]: Available teams: [accent]Sharded, [royal]Blue[lightgray], [scarlet]Crux[lightgray], [lightgray]Derelict[lightgray], [lime]Green[lightgray], [purple]Purple[lightgray].");
+                                player.sendMessage("[salmon]CT[lightgray]: Available teams: [accent]Sharded (Yellow)[lightgray], [royal]Blue[lightgray], [scarlet]Crux (Red)[lightgray], [lightgray]Derelict (Gray)[lightgray], [lime]Green[lightgray], [purple]Purple[lightgray].");
                                 return;
                         }
                         player.setTeam(setTeam);
