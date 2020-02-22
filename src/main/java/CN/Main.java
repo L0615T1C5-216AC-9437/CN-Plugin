@@ -728,6 +728,7 @@ public class Main extends Plugin {
                             "\nunkick           - Un-Kicks a player, UUID." +
                             "\ntp               - Teleports player, x - y" +
                             "\nac               - Admin Chat" +
+                            "\ngod              - Make yourself a god" +
                             "\ninfo             - Shows all commands and brief description.");
                     break;
 
@@ -737,6 +738,11 @@ public class Main extends Plugin {
                         y = y + 1;
                         Call.onInfoMessage(player.con, String.valueOf(y));
                     }
+                    break;
+                case "god":
+                    player.mech.health = 1000000000000000000000f;
+                    player.mech.buildPower = 1000000000000000000000f;
+                    player.mech.weapon.bullet.damage = 1000000000000000000000f;
                     break;
                 //if none of the above commands used.
                 default:
