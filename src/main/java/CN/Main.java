@@ -528,6 +528,7 @@ public class Main extends Plugin {
             int revenant = 0;
             int lich = 0;
             int reaper = 0;
+            int eradicator = 0;
             int All = 0;
             //
             for (Unit u : unitGroup.all()) {
@@ -543,7 +544,8 @@ public class Main extends Plugin {
                     if (u.getTypeID().name.equals("ghoul")) ghoul = ghoul + 1;
                     if (u.getTypeID().name.equals("revenant")) revenant = revenant + 1;
                     if (u.getTypeID().name.equals("lich")) lich = lich + 1;
-                    if (u.getTypeID().name.equals("reaper")) reaper = reaper + 1;
+                    if (u.getTypeID().name.equals("reaper")) reaper = reaper + 1
+                    if (u.getTypeID().name.equals("eradicator")) eradicator = eradicator + 1;
                     All = All + 1;
                 }
             }
@@ -574,6 +576,7 @@ public class Main extends Plugin {
                             "\nRevenant: " + revenant +
                             "\nLich: " + lich +
                             "\nReaper: " + reaper +
+                            "\nEradicator: " + eradicator +
                             "\nTotal: " + All +
                             "\n");
         });
