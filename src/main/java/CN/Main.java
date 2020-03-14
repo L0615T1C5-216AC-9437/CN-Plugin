@@ -82,7 +82,7 @@ public class Main extends Plugin {
                             Call.onInfoToast(p.con,"+1 minutes played.", 3);
                             //auto congratulations
                             switch (Main.database.get(p.uuid).getTP()) {
-                                case 1 * 60:
+                                case 1* 60:
                                 case 2* 60:
                                 case 3* 60:
                                 case 4* 60:
@@ -898,9 +898,19 @@ public class Main extends Plugin {
                             if (arg[1].equals("on")) {
                                 state.rules.infiniteResources = true;
                                 Call.sendMessage("[scarlet]<Admin> [lightgray]" + player.name + " [white] has [lime]Enabled [white]Sandbox mode.");
+                                for (Player p : playerGroup.all()) {
+                                    Call.onWorldDataBegin(p.con);
+                                    netServer.sendWorldData(p);
+                                    Call.onInfoToast(p.con, "Auto Sync completed.", 5);
+                                }
                             } else if (arg[1].equals("off")) {
                                 state.rules.infiniteResources = false;
                                 Call.sendMessage("[scarlet]<Admin> [lightgray]" + player.name + " [white] has [lime]Disabled [white]Sandbox mode.");
+                                for (Player p : playerGroup.all()) {
+                                    Call.onWorldDataBegin(p.con);
+                                    netServer.sendWorldData(p);
+                                    Call.onInfoToast(p.con, "Auto Sync completed.", 5);
+                                }
                             } else {
                                 player.sendMessage("Turn Infinite Items [lightgray]on [white]or [lightgray]off[white].");
                             }
