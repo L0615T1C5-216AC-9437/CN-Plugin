@@ -6,7 +6,7 @@ CN's Official Plugin. Has useful commands, admin commands and a reaper spawner.
 1) download src
 2) run gradlew.bat
 3) go to the plugin folder in cmd. (example: `cd C:\user\one\desk\pluginfolder\`)
-4) type `gradlew jar` and execute
+4) type `gradlew jar` and execute(`./gradlew jar` on linux)
 5) done, look for plugin.jar in pluginfolder\build\libs\
 
 Note: Highly recommended to use Java 8.
